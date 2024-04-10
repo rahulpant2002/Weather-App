@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="./images/fav.png">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="content">
+
+            <h1>Weather &#160 App</h1>
+    
+            <div class="weatherTab">
+                <button class="weatherBtn" id="currWeatherBtn">Your Weather</button>
+                <button class="weatherBtn" id="searchWeatherBtn">Search Weather</button>
+            </div>
+
+            <div class="weatherContainer">
+                <!-- grant Access Screen -->
+                <div class="grantContainer">
+                    <div class="locIcon">
+                        <i class="fa-solid fa-location-dot fa-2x" style="color: white;"></i>
+                    </div>
+                    <h2>Grant Location Access</h2>
+                    <p class="desc">Allow Access To Get Weather Information</p>
+                    <button class="grantAccessBtn">Grant Access</button>
+                </div>
+
+
+                <!-- Loading Screen  -->
+                <div class="loadingContainer">
+                    <img src="./images/loading.gif" height="100" width="100" loading="lazy">
+                    <p>Loading</p>
+                </div>
+                
+
+                <!-- search Container -->
+                <div class="searchConatiner">
+                    <input type="text" placeholder="Search for City..." class="city">
+                    <button onclick="myFunction()" class="searchIcon">
+                        <i class="fa-solid fa-magnifying-glass fa-1.5x"></i>
+                    </button>
+                </div>
+                
+
+                <!-- weather Info Container -->
+                <div class="weatherInfo">
+
+                    <div class="cityNameConatiner">
+                        <p class="cityName"></p>
+                        <img class="flag">
+                    </div>
+
+                    <p class="weatherType"></p>
+                    <img class="weatherImg"></img>
+                    <h2 class="temperature"></h2>
+
+                    <div class="impFact">
+                        <div class="box">
+                            <img src="./images/wind.png" width="60" height="50" loading="lazy">
+                            <p>WINDSPEED</p>
+                            <p class="wsVal res"></p>
+                        </div>
+        
+                        <div class="box">
+                            <img src="./images/humidity.png" width="50" height="50" loading="lazy">
+                            <p>HUMIDITY</p>
+                            <p class="hdtVal res"></p>
+                        </div>
+        
+                        <div class="box">
+                            <img src="./images/cloud.png" width="50" height="50" loading="lazy">
+                            <p>CLOUDS</p>
+                            <p class="cldVal res"></p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- error block -->
+                <div class="error">
+<pre>
+         404 
+    City Not Found...
+</pre>
+                </div>
+    
+            </div>
+
+        </div>
+
+    </div>
+    <script src="https://kit.fontawesome.com/2d884ac51e.js" crossorigin="anonymous"></script>
+    <script src="style.js"></script>
+</body>
+</html>
